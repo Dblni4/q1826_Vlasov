@@ -5,7 +5,7 @@ package by.itstep.lesson1;
 public class LessonOne {
     public static void main(String[] args){
         int ExamGrade = 111;
-        if(ExamGrade >= 90 & ExamGrade <= 100){
+        if(ExamGrade >= 90 & ExamGrade <= 100) {
             System.out.println("Отлично (A) - Ты гений!");}
         else if(ExamGrade >= 75 & ExamGrade <= 89){
         System.out.println("Хорошо (B) - Молодец!");}
