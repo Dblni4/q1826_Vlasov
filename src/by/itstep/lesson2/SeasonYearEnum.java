@@ -1,39 +1,28 @@
 package by.itstep.lesson2;
 
 
-import java.util.Locale;
-import java.util.Scanner;
-
 public enum SeasonYearEnum {
 
 
-    DECEMBER,
-    JANUARY,
-    FEBRUARY,
+    DECEMBER("Winter"),
+    JANUARY("Winter"),
+    FEBRUARY("Winter"),
 
-    MARCH,
-    APRIL,
-    MAY,
+    MARCH("Spring"),
+    APRIL("Spring"),
+    MAY("Spring"),
 
-    JUNE,
-    JULY,
-    AUGUST,
+    JUNE("Summer"),
+    JULY("Summer"),
+    AUGUST("Summer"),
 
-    SEPTEMBER,
-    OCTOBER,
-    NOVEMBER;
+    SEPTEMBER("Autumn"),
+    OCTOBER("Autumn"),
+    NOVEMBER("Autumn");
 
-    Scanner obj = new Scanner(System.in);
-    String month = obj.nextLine();
+    public final String seasonYear;
 
-    SeasonYearEnum enumMonth = SeasonYearEnum.valueOf(month.toUpperCase());
-
-
-
-
-
-
-
-
-
+    SeasonYearEnum(String seasonYear) {
+        this.seasonYear = seasonYear;
+    }
 }
