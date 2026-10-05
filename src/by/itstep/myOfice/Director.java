@@ -1,8 +1,10 @@
 package by.itstep.myOfice;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Arrays;
 
-public class Director extends Employee {
+public class Director extends Employee implements HeresJohnny {
 
     private Employee[] employees;
 
@@ -29,18 +31,38 @@ public class Director extends Employee {
 
     @Override
     public Integer getSalary() {
-        if(employees == null){
-        return super.getSalary();
-     }else {
+        if (employees == null) {
+            return super.getSalary();
+        } else {
             return super.getSalary() + (employees.length * 100);
         }
     }
 
+
     @Override
     public String toString() {
-        return "\nDirector {" +
+        return "Director{" +
                 "employees=" + Arrays.toString(employees) +
-                " ,Salary=" + getSalary() +
                 '}';
     }
-}
+
+    @Override
+    public void findEmployee(Employee employee, String name) {
+        boolean found = false;
+        if (employees == null)
+            return;
+
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i].getName().equals(name)) {
+                System.out.println("Сотрудник " + name + " в подчинении у директора " + getName() + " " + getSname());
+                found = true;
+                break;
+            }
+
+
+        }
+        if (!found) {
+            System.out.println("Нет такого сотрудника");
+
+        }
+    }}

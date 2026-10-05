@@ -33,5 +33,21 @@ public class Person {
     public int hashCode() {
         return Objects.hash(name, sname);
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSname() {
+        return sname;
+    }
+
+    public void setSname(String sname) {
+        this.sname = sname;
+    }
 }
 
