@@ -1,5 +1,6 @@
 package by.itstep;
 
+import by.itstep.analizatorTexta.AnalizatorTexta;
 import by.itstep.lesson2.ConsonantVowel;
 import by.itstep.lesson2.Povtorusha;
 import by.itstep.lesson2.SeasonYear;
@@ -12,6 +13,7 @@ import by.itstep.myOfice.Employee;
 import by.itstep.myOfice.Person;
 import by.itstep.myOfice.Worker;
 
+import java.lang.reflect.Array;
 import java.nio.charset.MalformedInputException;
 import java.util.Arrays;
 
@@ -61,8 +63,26 @@ public class Main {
 //
 //        ((Director) d1).findEmployee(w4, "Vladimir");
 
-
-
+        AnalizatorTexta analizator = new AnalizatorTexta();
+        analizator.inputText();
+        analizator.wordCount();
+        analizator.longWord();
+        analizator.reversWord();
+        analizator.palindrom();
+        System.out.println("Количество слов: " + analizator.wordCount());
+        System.out.println("Самое длинное слово: " +analizator.longWord());
+        System.out.println("Частота букв: " +analizator.letterFrequency());
+        System.out.println("Текст с перевернутыми словами: " + String.join(" " , analizator.reversWord()));
+        System.out.println("Текст является палиндромом: " +analizator.palindrom());
 
 
     }}
+
+
+
+//Количество слов: 3
+//Самое длинное слово: Аргентина
+//Частота букв: а: 4, г: 1, е: 1, и: 2, м: 1, н: 3, р: 2, т: 1
+//Текст с перевернутыми словами: анитнегрА тинам арген
+//Текст является палиндромом: Да
+
